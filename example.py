@@ -1,4 +1,5 @@
-from tests import *
+import unittest
+from tests.test_vector import *
 
 suite1 = unittest.TestSuite()
 suite1.addTest(TestVector('test_init'))
