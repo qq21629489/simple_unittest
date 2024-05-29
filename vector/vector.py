@@ -1,13 +1,17 @@
 class Vector:
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
+        if isinstance(x, (int, float)) and \
+           isinstance(y, (int, float)): 
+            self.x = x
+            self.y = y
+        else:
+            raise ValueError('not a number')
         
     def add(self, other):
         return Vector(self.x + other.x, 
                       self.y + other.y)
         
-    def add(self, factor):
+    def mul(self, factor):
         return Vector(self.x * factor, 
                       self.y * factor)
         
