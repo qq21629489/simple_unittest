@@ -42,7 +42,7 @@ class TestVector(unittest.TestCase):
         self.assertEqual(v3.x, 3)
         self.assertEqual(v3.y, 5)
     
-    @unittest.skipIf(sys.version_info > (3, 7), 'only suport in 3.7 and ealriler')
+    @unittest.skipIf(sys.version_info > (3, 7), 'only suport in 3.7 or ealriler')
     def test_skip(self):
         v = Vector(1, 2)
         self.assertEqual(v.x, 1)
